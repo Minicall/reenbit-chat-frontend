@@ -17,7 +17,7 @@ function App() {
       .then(() => console.log("Connected to SignalR!"))
       .catch(err => console.error("Connection failed: ", err));
 
-    connect.on("receiveMessage", (user, msg, sentiment) => {
+    connect.on("receivemessage", (user, msg, sentiment) => {
       setMessages(prev => [...prev, { user, msg, sentiment }]);
     });
 
