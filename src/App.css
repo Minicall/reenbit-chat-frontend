@@ -8,7 +8,7 @@
 }
 
 .chat-container {
-  width: 450px; /* widened for better spacing */
+  width: 450px;
   background: white;
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -48,7 +48,7 @@
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
-  min-width: 0; /* prevents flex overflow */
+  min-width: 0;
 }
 
 .input-area button {
@@ -66,7 +66,6 @@
   background-color: #0056b3;
 }
 
-/* Optional: make it responsive on smaller screens */
 @media (max-width: 500px) {
   .chat-container {
     width: 95%;
