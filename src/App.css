@@ -8,13 +8,14 @@
 }
 
 .chat-container {
-  width: 400px;
+  width: 450px; /* widened for better spacing */
   background: white;
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 12px;
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
 }
 
 .chat-container h1 {
@@ -30,11 +31,15 @@
   padding: 10px;
   margin-bottom: 10px;
   height: 400px;
+  box-sizing: border-box;
 }
 
 .input-area {
   display: flex;
+  align-items: center;
   gap: 6px;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 .input-area input[type="text"] {
@@ -42,17 +47,28 @@
   padding: 6px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  box-sizing: border-box;
+  min-width: 0; /* prevents flex overflow */
 }
 
 .input-area button {
-  padding: 6px 12px;
+  flex-shrink: 0;
+  padding: 6px 16px;
   border: none;
   background-color: #007bff;
   color: white;
   border-radius: 4px;
   cursor: pointer;
+  box-sizing: border-box;
 }
 
 .input-area button:hover {
   background-color: #0056b3;
+}
+
+/* Optional: make it responsive on smaller screens */
+@media (max-width: 500px) {
+  .chat-container {
+    width: 95%;
+  }
 }
